@@ -11,7 +11,7 @@ class PostController extends Controller
 
     public function index()
     {
-        $posts = Post::limit(5)->orderBy('updated_at', 'desc')->get();
+        $posts = Post::all();
 
         return view('admin.posts.index', compact('posts'));
     }

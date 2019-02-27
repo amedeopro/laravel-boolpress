@@ -8,6 +8,8 @@
 
         <h1>Questi sono tutti i Post creati</h1>
 
+
+
         @foreach ($posts as $post)
 
           <h2> <a href="{{ route('admin.posts.show', $post->id) }}">{{ $post->title }}</a> <small>{{ $post->author }}</small> </h2>
@@ -21,6 +23,8 @@
           </form>
 
         @endforeach
+
+        
       </div>
 
     </div>
