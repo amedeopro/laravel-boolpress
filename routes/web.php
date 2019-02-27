@@ -11,7 +11,9 @@
 |
 */
 
-Route::get('/', 'HomeController@index' );
+Route::get('/', 'HomeController@index');
+Route::get('/home','HomeController@index')->name('home');
+Route::get('/admin/posts','Admin\PostController@index')->name('admin.posts.index');
 
 Auth::routes();
 
