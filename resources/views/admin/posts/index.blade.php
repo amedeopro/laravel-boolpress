@@ -14,6 +14,11 @@
           <p>{!! $post->content !!}</p>
 
           <a href="{{route('admin.posts.edit', $post->id)}}" class="btn btn-primary">AGGIORNA ARTICOLO</a>
+          <form action="{{route('admin.posts.destroy', $post->id)}}" method="post">
+            @csrf
+            @method('DELETE')
+            <input type="submit" class="btn btn-danger" value="ELIMINA ARTICOLO">
+          </form>
 
         @endforeach
       </div>
