@@ -11,7 +11,7 @@
         @foreach ($posts as $post)
 
           <h2> <a href="{{ route('admin.posts.show', $post->id) }}">{{ $post->title }}</a> <small>{{ $post->author }}</small> </h2>
-          <p>{{ $post->content }}</p>
+          <p>{!! $post->content !!}</p>
 
         @endforeach
       </div>
