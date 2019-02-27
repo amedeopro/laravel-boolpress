@@ -51,13 +51,21 @@ class PostController extends Controller
 
     public function edit($id)
     {
-        //
+      $post = Post::find($id); //find funziona solo ed esclusivamente per l'id
+      if (empty($post)) {
+      return abort(404);
+      }
+      return view('admin.posts.edit', compact('post'));
     }
 
 
-    public function update(Request $request, $id)
+    public function update(Request $request, Post $post)
     {
-        //
+        $data = $request->all();
+
+        $post->update($data);
+
+        return redirect()->route('admin.posts.index');
     }
 
 
