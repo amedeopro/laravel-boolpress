@@ -3,7 +3,7 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <a href="{{route('admin.categories.create')}}">AGGIUNGI CATEGORIA</a>
+        <a href="{{route('admin.categories.create')}}" class="btn btn-primary">AGGIUNGI CATEGORIA</a>
       </div>
     </div>
   </div>
@@ -14,9 +14,9 @@
         <ul>
           @foreach ($categories as $category)
             <li>
-              Nome Categoria:{{ $category->title }}
+              Nome Categoria: {{ $category->title }}
               <ul>
-                <li>Slug: {{ $category->slug }}</li>
+                <li>Slug: {{ $category->slug }}</li> <a href="{{route('admin.categories.edit', $category->id)}}"> Modifica categoria</a>
               </ul>
             </li>
           @endforeach
