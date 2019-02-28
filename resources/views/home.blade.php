@@ -6,7 +6,7 @@
         <h1>ultimi 5 post inseriti</h1>
         @foreach ($posts as $post)
           <h3><a href="{{ route('show', $post->id)}}">{{$post->title}}</a> <small>{{$post->author}}</small> </h3>
-          <p>{!! $post->content !!}</p>
+          <p>{!! str_limit($post->content, 40, ' (...)') !!}</p>
         @endforeach
       </div>
     </div>

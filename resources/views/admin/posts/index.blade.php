@@ -13,7 +13,7 @@
         @foreach ($posts as $post)
 
           <h2> <a href="{{ route('admin.posts.show', $post->id) }}">{{ $post->title }}</a> <small>{{ $post->author }}</small> </h2>
-          <p>{!! $post->content !!}</p>
+          <p>{!! str_limit($post->content, 10, ' (...)') !!}</p>
 
           <a href="{{route('admin.posts.edit', $post->id)}}" class="btn btn-primary">AGGIORNA ARTICOLO</a>
           <form action="{{route('admin.posts.destroy', $post->id)}}" method="post">
@@ -24,7 +24,7 @@
 
         @endforeach
 
-        
+
       </div>
 
     </div>
