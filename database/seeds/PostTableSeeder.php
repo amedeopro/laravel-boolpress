@@ -22,7 +22,7 @@ class PostTableSeeder extends Seeder
 
           $newPost = new Post;
 
-          $newpost->category_id = $randomCategory->id;
+          $newPost->category_id = $randomCategory->id;
           $newPost->title = $generaTitolo;
           $newPost->slug = Str::slug($generaTitolo);
           $newPost->author = $faker->name;
