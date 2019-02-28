@@ -15,9 +15,9 @@ class HomeController extends Controller
 
     }
 
-    public function show($id)
+    public function show($slug)
     {
-      $post = Post::find($id); //find funziona solo ed esclusivamente per l'id
+      $post = Post::where('slug', $slug)->first(); //find funziona solo ed esclusivamente per l'id
       if (empty($post)) {
       return abort(404);
       }
