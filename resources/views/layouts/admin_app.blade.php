@@ -34,7 +34,8 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                       <li> <a href="{{ route('admin.posts.index' )}}">Post </a></li>
-                      <li> <a href="{{ route('admin.posts.create' )}}"> Crea nuovo articolo</a></li>
+                      <li> <a href="{{ route('admin.posts.create' )}}"> Crea nuovo articolo </a></li>
+                      <li> <a href="{{ route('admin.categories.index' )}}"> Categorie </a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
